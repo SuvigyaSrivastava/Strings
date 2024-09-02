@@ -1,0 +1,35 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s1 = "";
+    string s2 = "";
+    
+    // Use getline to capture entire lines including spaces
+    getline(cin, s1);
+    getline(cin, s2);
+    
+    int c1 = 0;
+    int c2 = 0;
+    
+    for(int i = 0; i < s1.size(); i++){
+        if(s1[i] == ' ')
+            c1++;
+    }
+    for(int j = 0; j < s2.size(); j++){
+        if(s2[j] == ' ')
+            c2++;
+    }
+    
+    int difference = abs(c1 - c2);
+    
+    if(difference % 2 == 0){
+        cout << "Even: " << difference;
+    } else {
+        cout << "Odd: " << difference;
+    }
+    
+    return 0;
+}
+
